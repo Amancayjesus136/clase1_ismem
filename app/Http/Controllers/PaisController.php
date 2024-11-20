@@ -2,12 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Pais;
 use Illuminate\Http\Request;
 
 class PaisController extends Controller
 {
     public function index()
     {
-        return view('config.pais');
+        $paises = Pais::all();
+        return view('config.pais', compact('paises'));
+    }
+
+    public function store(Request $request)
+    {
+        Pais::create($request->all());
+        return redirect()->back()->with('success', 'País creado exitosamente.');
     }
 }
