@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ClienteController;
+use App\Http\Controllers\PaisController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,5 +20,7 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::resource('clientes', ClienteController::class);
+Route::resource('pais', PaisController::class);
+
 
 require __DIR__.'/auth.php';
