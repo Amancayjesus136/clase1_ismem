@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Cliente;
+use App\Models\Pais;
 use Illuminate\Http\Request;
 
 class ClienteController extends Controller
@@ -11,7 +13,9 @@ class ClienteController extends Controller
      */
     public function index()
     {
-        return view('client.cliente');
+        $paises = Pais::all();
+        $clientes = Cliente::all();
+        return view('client.cliente', compact('paises', 'clientes'));
     }
 
     /**
@@ -27,7 +31,8 @@ class ClienteController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Cliente::create($request->all());
+        return redirect()->back()->with('success', 'Cliente creado exitosamente.');
     }
 
     /**
