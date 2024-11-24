@@ -8,9 +8,9 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900">
+                <div class="p-12 text-gray-900">
                     <div class="d-flex justify-content-end">
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#clearCliente">
+                        <button type="button" class="btn btn-primary mb-4" data-bs-toggle="modal" data-bs-target="#clearCliente">
                             Clear Cliente
                           </button>
                     </div>
@@ -29,6 +29,7 @@
                             <th scope="col">Email</th>
                             <th scope="col">Numero</th>
                             <th scope="col">Estado</th>
+                            <th scope="col">Acciones</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -45,6 +46,10 @@
                               <td>{{ $cliente->email_cliente }}</td>
                               <td>{{ $cliente->numero_cliente }}</td>
                               <td>{{ $cliente->estado_cliente }}</td>
+                              <td>
+                                <a href="#" class="btn btn-primary mr-2">Editar</a>
+                                <a href="#" class="btn btn-danger">Eliminar</a>
+                              </td>
                             </tr>
                           @endforeach
                         </tbody>

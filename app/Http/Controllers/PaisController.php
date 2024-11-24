@@ -9,7 +9,7 @@ class PaisController extends Controller
 {
     public function index()
     {
-        $paises = Pais::all();
+        $paises = Pais::orderBy('id_pais', 'asc')->get();
         return view('config.pais', compact('paises'));
     }
 
