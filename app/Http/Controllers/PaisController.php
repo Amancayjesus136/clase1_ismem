@@ -18,4 +18,18 @@ class PaisController extends Controller
         Pais::create($request->all());
         return redirect()->back()->with('success', 'País creado exitosamente.');
     }
+
+    public function update(Request $request, string $id)
+    {
+        $pais = Pais::find($id);
+        $pais->update($request->all());
+        return redirect()->back()->with('success', 'País actualizado exitosamente.');
+    }
+
+    public function destroy(string $id)
+    {
+        $pais = Pais::find($id);
+        $pais->delete();
+        return redirect()->back()->with('success', 'País eliminado exitosamente.');
+    }
 }
