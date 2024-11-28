@@ -13,20 +13,20 @@
                         <div class="col-6">
                             <div class="card">
                                 <div class="card-header">
-                                  Featured
+                                  Total de paises
                                 </div>
                                 <div class="card-body">
-                                  <h5 class="card-title">Special title treatment</h5>
+                                  <h5 class="card-title">{{ $totalPaises }}</h5>
                                 </div>
                               </div>
                         </div>
                         <div class="col-6">
                             <div class="card">
                                 <div class="card-header">
-                                  Featured
+                                  Total usuarios
                                 </div>
                                 <div class="card-body">
-                                  <h5 class="card-title">Special title treatment</h5>
+                                  <h5 class="card-title">{{ $totalUsuarios }}</h5>
                                 </div>
                               </div>
                         </div>
